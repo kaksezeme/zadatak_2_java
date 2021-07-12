@@ -12,7 +12,7 @@ public abstract class PasswordGenerator {
 
     public abstract String generatePassword(int size);
 
-    protected Character getRandomCharacter() {
+    protected final Character getRandomCharacter() {
         if (this.random.nextInt() % 2 == 0) {
             return (char) (this.random.nextInt('z' - 'a') + 'a');
         } else {
