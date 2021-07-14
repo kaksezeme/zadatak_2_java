@@ -6,7 +6,7 @@ public class SpecificGenerator extends PasswordGenerator {
     public String generatePassword(int size) {
         String pass = "";
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < size; i++) {
             pass += getRandomCharacter().toString().toLowerCase();
         }
 
