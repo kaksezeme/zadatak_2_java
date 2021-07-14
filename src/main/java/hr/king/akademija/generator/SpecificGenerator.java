@@ -8,9 +8,13 @@ public class SpecificGenerator extends PasswordGenerator{
     public String generatePassword(int size) {
         StringBuilder password = new StringBuilder();
         for (int i = 0; i < size; i++){
-            password.append(getRandomCharacter());
+            Character character = getRandomCharacter();
+            if (Character.isLowerCase(character))
+                password.append(getRandomCharacter());
+            else
+                i--;
         }
 
-        return password.toString().toLowerCase();
+        return password.toString();
     }
 }
