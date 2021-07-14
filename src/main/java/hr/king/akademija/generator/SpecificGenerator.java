@@ -10,7 +10,7 @@ public class SpecificGenerator extends PasswordGenerator{
         for (int i = 0; i < size; i++){
             Character character = getRandomCharacter();
             if (Character.isLowerCase(character))
-                password.append(getRandomCharacter());
+                password.append(character);
             else
                 i--;
         }
