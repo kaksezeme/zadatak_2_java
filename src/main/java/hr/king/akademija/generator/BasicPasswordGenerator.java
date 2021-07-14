@@ -5,7 +5,13 @@ public class BasicPasswordGenerator extends PasswordGenerator {
 
     @Override
     public String generatePassword(int size) {
-        throw new UnsupportedOperationException("Not implemented yet");
+        String pass = "";
+
+        for (int i = 0; i < 10; i++) {
+            pass += getRandomCharacter();
+        }
+
+        return pass;
     }
 
 }
